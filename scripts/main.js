@@ -1,3 +1,7 @@
+// A simple to_do app where we can add list items with a form,
+// delete them and filter through them all with vanilla JavaScript
+// and DOM properties and methods
+
 var form = document.getElementById('addForm');
 
 var itemList = document.getElementById('items');
@@ -47,6 +51,7 @@ function addItem (e) {
 
 	// Append li to list
 	itemList.appendChild(li);
+
 }
 
 // Delete Item
@@ -59,8 +64,11 @@ function removeItem(e){
 			var li = e.target.parentElement;
 
 			itemList.removeChild(li);
+
 		}
+
 	}
+
 }
 
 // Filter Items
@@ -82,8 +90,10 @@ function filterItems(e){
 			item.style.display = 'block';
 
 		} else {
-			
+
 			item.style.display = 'none';
 		}
+
 	});
+
 }
